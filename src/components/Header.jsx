@@ -29,25 +29,7 @@ function Header({searchKey}) {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
-                            {/*<Nav.Link href="#home" className='t3'>
-                                <FormControl  sx={{
-                                    '& > :not(style)': { m: 1 },
-                                }} className='t3'>
-                                    <InputLabel id="demo-simple-select-label">Location</InputLabel>
-                                    <Select 
-                                        labelId="demo-simple-select-label"
-                                        id="demo-simple-select"
-                                        value={place}
-                                        label="Place"
-                                        onChange={(e)=>handleChange(e)}
-
-                                    >
-                                        <MenuItem value={10} >Ernakulam</MenuItem>
-                                        <MenuItem value={20} type='button' onClick={()=>searchKey2("Thrissur")}>Thrissur</MenuItem>
-                                        <MenuItem value={30}>Thiruvananthapuram</MenuItem>
-                                    </Select>
-                                </FormControl>
-                            </Nav.Link>*/}
+                          
                             <Nav.Link href="#link" className='d-flex'>
                                 <Box
                                     component="form"
@@ -58,7 +40,7 @@ function Header({searchKey}) {
                                     autoComplete="off"
                                     className='t2'
                                 >
-                                    <TextField id="outlined-basic" label="Search Name" variant="outlined" className='' onChange={(e)=>searchKey(e.target.value)}/>
+                                    <TextField id="outlined-basic" label="Search Location" variant="outlined" className='' onChange={(e)=>searchKey(e.target.value)}/>
 
 
                                 </Box>

@@ -32,11 +32,11 @@ function Login({register}) {
           const result = await adminRegisterApi(adminDetails)
           console.log(result);
           if(result.status ==200){
-            toast.success('Registration successfully')
+            alert('Registration successfully')
             navigate('/')
           }
           else{
-            toast.error('something went wrong.Please try after sometime')
+            alert('something went wrong.Please try after sometime')
           }
   
         }
@@ -52,7 +52,7 @@ function Login({register}) {
          const result = await adminLoginApi({email,password})
          console.log(result);
          if(result.status==200){
-           toast.success('Login Successfull')
+           alert('Login Successfull')
            sessionStorage.setItem("existingAdmin",JSON.stringify(result.data.existingAdmin))//object to string //storing existingUser and token to sessionStorage
            sessionStorage.setItem("token",result.data.token)
            setAdminDetails({
@@ -65,7 +65,7 @@ function Login({register}) {
            },2000)
    
          }else{
-           toast.error(result.response.data)  //result.status
+           alert(result.response.data)  //result.status
          }
    
         }
@@ -90,7 +90,7 @@ function Login({register}) {
          :
           <h5 className='text-start'>Sign In to your Account</h5>}
 
-          <form className='mt-4 w-100'>
+          <form className='mt-4 w-75'>
            {register && <div className='mb-3'>
               <input type="text" placeholder='Username' className='form-control w-100' onChange={(e)=>setAdminDetails({...adminDetails,username:e.target.value})}/>
 
